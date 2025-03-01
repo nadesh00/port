@@ -775,18 +775,28 @@ main {
  * education and experience 
  */
 
-.timeline { margin-bottom: 30px; }
+.timeline { margin-bottom: 50px; }
 
 .timeline .title-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .timeline-list {
   font-size: var(--fs-6);
   margin-left: 45px;
+}
+
+@keyframes blinkEffect {
+  50% {
+    opacity: 0;
+  }
+}
+
+.timeline-item.blink::after {
+  animation: blinkEffect 1s infinite;
 }
 
 .timeline-item { position: relative; }
@@ -871,9 +881,110 @@ main {
   border-radius: inherit;
 }
 
+/* Section Styling */
+.tech-skills {
+  margin-top: 40px;
+  text-align: center;
+}
 
+/* Skill Category Headers */
+.skill-category {
+  margin-bottom: 20px;
+}
 
+.skill-category h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--light-gray);
+}
 
+/* Skill Buttons */
+.skill-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill-btn {
+  background: var(--jet);
+  color: var(--light-gray);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Hover Effect (Glimmer Gold) */
+.skill-btn:hover {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  color: #000;
+  box-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+  transform: translateY(-2px);
+}
+
+/* Section Styling */
+.certifications {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Certification Category Headers */
+.certification-category {
+  margin-bottom: 20px;
+}
+
+.certification-category h4 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--light-gray);
+}
+
+/* Certification Buttons */
+.certification-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cert-btn {
+  background: var(--jet);
+  color: var(--light-gray);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Hover Effect (Glimmer Gold + Scale) */
+.cert-btn:hover {
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  color: #000;
+  box-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+  transform: scale(1.05);
+}
+
+/* External Link Icon */
+.link-icon {
+  font-size: 1em;
+  color: var(--vegas-gold);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cert-btn:hover .link-icon {
+  transform: rotate(15deg);
+}
 
 /*-----------------------------------*\
   #PORTFOLIO
