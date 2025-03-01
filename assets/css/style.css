@@ -1494,6 +1494,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-link { --fs-8: 14px; }
 
+  .navbar-item:nth-child(3),
+  .navbar-item:nth-child(4) {
+  display: none;
+}
+
 
 
   /**
