@@ -800,6 +800,7 @@ main {
 .timeline-list {
   font-size: var(--fs-6);
   margin-left: 45px;
+  color: white;
 }
 
 @keyframes blinkEffect {
