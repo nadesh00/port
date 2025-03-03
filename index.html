@@ -7,6 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nadesh Subramanian</title>
 
+  <script>
+    setTimeout(() => {
+      if (!sessionStorage.getItem("hardRefresh")) {
+        sessionStorage.setItem("hardRefresh", "true");
+        location.reload(true);
+      }
+    }, 500); // 500ms delay before refresh
+  </script>
+  
+  
+
   <!--
     - favicon
   -->
@@ -582,10 +593,14 @@
           
               <li class="timeline-item blink">
                 <h4 class="h4 timeline-item-title">Adjunct Professor</h4>
+                <span>New York University</span>
                 <span>2023 — Present</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                  molestias exceptur.
+                 <strong>Summer 23:</strong>CS4CS
+                 <strong>Summer 24:</strong> CS4CS, SS-SEC
+                 <strong>Fall 24:</strong> CPath
+                 <strong>Spring 25:</strong> Cpath, SOSC
+                 <strong>Summer 25:</strong> CS4CS, Cpath, SOSC
                 </p>
               </li>
           
@@ -593,48 +608,73 @@
                 <h4 class="h4 timeline-item-title">Security Researcher - XBOW</h4>
                 <span>2024 — Present</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                  molestias exceptur.
+                  <ul>
+                    <li>>Implement self-learning exploit generation models that adapt dynamically to unknown vulnerabilities.</li>
+                    <li>>Design autonomous red teaming strategies using AI agents to perform real-time attack path analysis.</li>
+                    <li>>Build threat intelligence pipelines for automated attack detection, response, and mitigation in AI-powered pentesting systems.</li>
+                  </ul>
                 </p>
               </li>
           
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Security Analyst</h4>
+                <span>The Trade Desk</span>
                 <span>May 2024 — Oct 2024</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+                  <ul>
+                    <li>>Developed risk-based scoring methodologies to classify third-party vendors based on their exposure to cyber threats.
+                    </li>
+                    <li>>Collaborated with red teams to simulate vendor compromise scenarios, testing incident response protocols and security policy enforcement.
+                    </li>
+                  </ul>
                 </p>
               </li>
           
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Application Security Intern</h4>
+                <span>The PenTest Partners</span>
                 <span>May 2024 — Aug 2024</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+                  <ul>
+                    <li>>Developed custom firmware analysis techniques to identify buffer overflows, insecure cryptographic implementations, and privilege escalation risks in automotive software.
+                    </li>
+                    <li>>Reverse-engineered ECU firmware images to identify security flaws in vehicle infotainment, telematics, and over-the-air (OTA) update systems.
+                    </li>
+                    <li>>Designed automated static and dynamic analysis pipelines using Burp Suite, Semgrep, and SAST tools to scan for insecure application patterns.</li>
+                  </ul>
                 </p>
               </li>
           
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Grad Developer</h4>
+                <span>NYU HSRN</span>
                 <span>Feb 2024 — May 2024</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
+                  <ul>
+                    <li>>Integrated container security scanning tools to detect vulnerabilities in custom SONiC images before deployment.
+                    </li>
+                    <li>>Configured network access security using IEEE 802.1X protocol on Dell SonicWall via PacketFence.
+                    </li>
+                    <li>>Established RADIUS authentication with PacketFence as the server ensuring network security</li>
+                    <li>>Automated code quality checks using YAML scripts in GitLab pipeline stage with open-source code linters for Python, C++, Java</li>
+                  </ul>                
                 </p>
               </li>
           
               <li class="timeline-item">
-                <h4 class="h4 timeline-item-title">Security Engineer 1</h4>
+                <h4 class="h4 timeline-item-title">Security Engineer</h4>
+                <span>Null Errors</span>
+                <span>Co-op</span>
                 <span>Mar 2021 — July 2022</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
                 </p>
               </li>
           
               <li class="timeline-item">
                 <h4 class="h4 timeline-item-title">Security Analyst Intern</h4>
+                <span>Null Errors</span>
                 <span>Sep 2020 — Mar 2021</span>
                 <p class="timeline-text">
-                  Nemo enim ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.
                 </p>
               </li>
           
