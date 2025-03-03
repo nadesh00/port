@@ -505,6 +505,19 @@ main {
 }
 
 .about-text p { margin-bottom: 15px; }
+.blinking-cursor {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: var(--orange-yellow-crayola);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
 
 
@@ -1482,8 +1495,174 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
-
-
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--fs-6);
+    color: var(--light-gray);
+    padding: 20px;
+    background: var(--eerie-black-2);
+    border: 1px solid var(--jet);
+    border-radius: 14px;
+    box-shadow: var(--shadow-2);
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto 20px auto; /* Centers footer */
+    position: relative;
+    min-height: 100px; /* Prevents footer from collapsing */
+    flex-shrink: 0; /* Ensures footer does not shrink */
+  }
+  
+  /* Background effect to match UI */
+  .footer::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  .footer a {
+    color: var(--orange-yellow-crayola);
+    text-decoration: none;
+    font-weight: var(--fw-500);
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer a:hover {
+    color: var(--vegas-gold);
+  }
+  
+  /* License icon styling */
+  .cc-license {
+    display: inline-block;
+    margin-top: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    width: 88px;
+    height: auto;
+  }
+  
+  .cc-license:hover {
+    opacity: 1;
+  }
+  
+  /* ---- Full Responsiveness for ALL screen sizes ---- */
+  @media (max-width: 1280px) { /* Large laptops */
+    .footer {
+      font-size: var(--fs-7);
+      padding: 18px;
+      width: 92%;
+    }
+  }
+  
+  @media (max-width: 1024px) { /* Small laptops & tablets */
+    .footer {
+      font-size: var(--fs-7);
+      padding: 16px;
+      width: 94%;
+      max-width: 94%;
+    }
+  }
+  
+  @media (max-width: 900px) { /* Tablets */
+    .footer {
+      font-size: var(--fs-8);
+      padding: 14px;
+      width: 96%;
+      max-width: 96%;
+    }
+  
+    .cc-license {
+      width: 75px;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Large phones */
+    .footer {
+      width: 97%;
+      max-width: 97%;
+      padding: 12px;
+      min-height: 110px; /* Maintains spacing */
+    }
+  
+    .footer p {
+      font-size: var(--fs-8);
+    }
+  
+    .cc-license {
+      width: 70px;
+    }
+  }
+  
+  @media (max-width: 600px) { /* Mid-size phones */
+    .footer {
+      width: 98%;
+      max-width: 98%;
+      padding: 10px;
+      min-height: 120px;
+    }
+  
+    .footer p {
+      font-size: var(--fs-8);
+    }
+  
+    .cc-license {
+      width: 65px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Small phones */
+    .footer {
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+      min-height: 130px;
+    }
+  
+    .footer p {
+      font-size: var(--fs-8);
+    }
+  
+    .cc-license {
+      width: 60px;
+    }
+  }
+  
+  @media (max-width: 375px) { /* iPhone SE / Mini phones */
+    .footer {
+      padding: 8px;
+      min-height: 140px;
+    }
+  
+    .footer p {
+      font-size: 12px;
+    }
+  
+    .cc-license {
+      width: 55px;
+    }
+  }
+  
+  @media (max-width: 320px) { /* Tiny devices */
+    .footer {
+      padding: 6px;
+      min-height: 150px;
+    }
+  
+    .footer p {
+      font-size: 11px;
+    }
+  
+    .cc-license {
+      width: 50px;
+    }
+  }
+  
   /**
    * #NAVBAR
    */
