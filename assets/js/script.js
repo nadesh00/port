@@ -185,3 +185,11 @@ navigationLinks.forEach((navLink) => {
     window.scrollTo(0, 0);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  let footer = document.querySelector(".footer");
+
+  if (window.innerWidth > 600) {  // Show only for non-phone screens
+    footer.style.display = "block";
+  }
+});

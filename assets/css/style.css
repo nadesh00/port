@@ -1553,116 +1553,79 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
   /* ---- Full Responsiveness for ALL screen sizes ---- */
-  @media (max-width: 1280px) { /* Large laptops */
-    .footer {
-      font-size: var(--fs-7);
-      padding: 18px;
-      width: 92%;
-    }
+  /* ---- Full Responsiveness for ALL screen sizes ---- */
+
+@media (max-width: 1280px) { /* Large laptops */
+  .footer {
+    font-size: var(--fs-7);
+    padding: 18px;
+    width: 92%;
   }
-  
-  @media (max-width: 1024px) { /* Small laptops & tablets */
-    .footer {
-      font-size: var(--fs-7);
-      padding: 16px;
-      width: 94%;
-      max-width: 94%;
-    }
+}
+
+@media (max-width: 1024px) { /* Small laptops & tablets */
+  .footer {
+    font-size: var(--fs-7);
+    padding: 16px;
+    width: 94%;
+    max-width: 94%;
   }
-  
-  @media (max-width: 900px) { /* Tablets */
-    .footer {
-      font-size: var(--fs-8);
-      padding: 14px;
-      width: 96%;
-      max-width: 96%;
-    }
-  
-    .cc-license {
-      width: 75px;
-    }
+}
+
+@media (max-width: 900px) { /* Tablets */
+  .footer {
+    font-size: var(--fs-8);
+    padding: 14px;
+    width: 96%;
+    max-width: 96%;
   }
-  
-  @media (max-width: 768px) { /* Large phones */
-    .footer {
-      width: 97%;
-      max-width: 97%;
-      padding: 12px;
-      min-height: 110px; /* Maintains spacing */
-    }
-  
-    .footer p {
-      font-size: var(--fs-8);
-    }
-  
-    .cc-license {
-      width: 70px;
-    }
+
+  .cc-license {
+    width: 75px;
   }
-  
-  @media (max-width: 600px) { /* Mid-size phones */
-    .footer {
-      width: 98%;
-      max-width: 98%;
-      padding: 10px;
-      min-height: 120px;
-    }
-  
-    .footer p {
-      font-size: var(--fs-8);
-    }
-  
-    .cc-license {
-      width: 65px;
-    }
+}
+
+@media (max-width: 768px) { /* Large phones */
+  .footer {
+    width: 97%;
+    max-width: 97%;
+    padding: 12px;
+    min-height: 110px; /* Maintains spacing */
   }
-  
-  @media (max-width: 480px) { /* Small phones */
-    .footer {
-      width: 100%;
-      max-width: 100%;
-      padding: 10px;
-      min-height: 130px;
-    }
-  
-    .footer p {
-      font-size: var(--fs-8);
-    }
-  
-    .cc-license {
-      width: 60px;
-    }
+
+  .footer p {
+    font-size: var(--fs-8);
   }
-  
-  @media (max-width: 375px) { /* iPhone SE / Mini phones */
-    .footer {
-      padding: 8px;
-      min-height: 140px;
-    }
-  
-    .footer p {
-      font-size: 12px;
-    }
-  
-    .cc-license {
-      width: 55px;
-    }
+
+  .cc-license {
+    width: 70px;
   }
-  
-  @media (max-width: 320px) { /* Tiny devices */
-    .footer {
-      padding: 6px;
-      min-height: 150px;
-    }
-  
-    .footer p {
-      font-size: 11px;
-    }
-  
-    .cc-license {
-      width: 50px;
-    }
+}
+
+/* 🔥 Hide Footer for ALL Phone Screens 🔥 */
+@media (max-width: 600px) { /* Mid-size phones */
+  .footer {
+    display: none;
   }
+}
+
+@media (max-width: 480px) { /* Small phones */
+  .footer {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) { /* iPhone SE / Mini phones */
+  .footer {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) { /* Tiny devices */
+  .footer {
+    display: none;
+  }
+}
   
   /**
    * #NAVBAR
