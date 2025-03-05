@@ -186,3 +186,26 @@ navigationLinks.forEach((navLink) => {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const readMoreButtons = document.querySelectorAll(".read-more-btn");
+
+  readMoreButtons.forEach(button => {
+    button.addEventListener("click", function () {
+      const expandableContent = this.previousElementSibling;
+      
+      if (expandableContent.style.display === "none" || expandableContent.style.display === "") {
+        expandableContent.style.display = "block";
+        this.innerText = "Read Less";
+      } else {
+        expandableContent.style.display = "none";
+        this.innerText = "Read More";
+      }
+    });
+  });
+});
+
+document.getElementById("recommendations-btn").addEventListener("click", function() {
+  document.getElementById("recommendations").scrollIntoView({ behavior: "smooth" });
+});
+
