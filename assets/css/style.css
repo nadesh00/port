@@ -1854,36 +1854,214 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * PORTFOLIO
-   */
+/**
+ * PORTFOLIO
+ */
 
-  .article-title { padding-bottom: 20px; }
+ .article-title { 
+  padding-bottom: 20px; 
+}
 
-  .filter-select-box { display: none; }
+.filter-select-box { 
+  display: none; 
+}
 
-  .filter-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    padding-left: 5px;
-    margin-bottom: 30px;
+.filter-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+
+.filter-item button {
+  color: var(--light-gray);
+  font-size: var(--fs-5);
+  transition: var(--transition-1);
+}
+
+.filter-item button:hover { 
+  color: var(--light-gray-70); 
+}
+
+.filter-item button.active { 
+  color: var(--orange-yellow-crayola); 
+}
+
+/* Portfolio and Blog Grid */
+.project-list, .blog-posts-list { 
+  display: flex;
+  flex-direction: column; /* Stack projects */
+  width: 100%;
+  max-width: 1200px; /* Limit width */
+}
+
+/* ------------------- */
+/* Projects Section */
+/* ------------------- */
+
+.projects {
+  padding: 2rem;
+  background-color: #121212;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to left */
+  width: 100%;
+}
+
+/* Project Item - Horizontal Layout */
+.project-item {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 1000px; /* Expands width */
+  transition: all 0.3s ease;
+  overflow: hidden;
+  gap: 20px; /* Space between image and text */
+}
+
+/* Expand the project box when active */
+.project-item.expanded {
+  max-height: none;
+}
+
+/* Project Image */
+.project-img {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 200px; /* Ensures image doesn't shrink */
+  max-width: 200px;
+  height: auto;
+}
+
+.project-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.project-img:hover img {
+  opacity: 0.85;
+}
+
+/* Project Details - More Space Horizontally */
+.project-details {
+  flex: 1; /* Expands to fill space */
+  padding-top: 1rem;
+  color: #ccc;
+  max-width: 700px; /* Ensures proper text alignment */
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f5f5f5;
+  margin-top: 0;
+  transition: color 0.3s ease;
+}
+
+.project-item:hover .project-title {
+  color: #ffcc00;
+}
+
+/* Limit text initially */
+.project-description {
+  max-height: 120px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Expand text when activated */
+.project-description.expanded {
+  max-height: 1000px;
+}
+
+/* Read More Button */
+.read-more-btn {
+  color: #ffcc00;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: color 0.3s;
+}
+
+.read-more-btn:hover {
+  color: #ffffff;
+}
+
+/* Feature List */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.feature-list li::before {
+  content: "✔";
+  color: #ffcc00;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Links */
+.project-details a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-details a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-item {
+    flex-direction: column; /* Stack image and details on smaller screens */
+    align-items: flex-start;
   }
 
-  .filter-item button {
-    color: var(--light-gray);
-    font-size: var(--fs-5);
-    transition: var(--transition-1);
+  .project-img {
+    max-width: 100%;
+    min-width: auto;
   }
 
-  .filter-item button:hover { color: var(--light-gray-70); }
+  .project-details {
+    max-width: 100%;
+  }
 
-  .filter-item button.active { color: var(--orange-yellow-crayola); }
-
-  /* portfolio and blog grid */
-
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .recommendations-title {
+    text-align: center;
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #ffcc00; /* Match theme color */
+    margin-bottom: 15px; /* Add spacing below */
+  }
+}
 
 
 

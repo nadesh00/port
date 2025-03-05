@@ -20,7 +20,7 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon"/>
 
   <!--
     - custom css link
@@ -187,11 +187,11 @@
             <button class="navbar-link" data-nav-link>Resume</button>
           </li>
 
-          <!-- <li class="navbar-item">
+          <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
           
-          <li class="navbar-item">
+          <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>blog</button>
           </li> -->
 
@@ -916,74 +916,140 @@
 
 
 
-
-
       <!--
-        - #PORTFOLIO
+        - #Portfolio
       -->
-      
+
       <article class="portfolio" data-page="portfolio">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+            <h2 class="h2 article-title">Portfolio</h2>
         </header>
       
         <section class="projects">
       
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Creative</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Media</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Open Source</button>
-            </li>
-          </ul>
-      
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-select-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-            </button>
-      
-            <ul class="select-list">
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Creative</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Media</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Open Source</button>
-              </li>
+            <ul class="filter-list">
+                <li class="filter-item">
+                    <button class="active" data-filter-btn>Projects</button>
+                </li>
+                <li class="filter-item">
+                    <button id="recommendations-btn" data-filter-btn>Recommendations</button>
+                </li>
             </ul>
-          </div>
       
-          <ul class="project-list">
+            <div class="filter-select-box" style="display: none;">
+                <button class="filter-select" data-select>
+                    <div class="select-value" data-select-value>Select category</div>
+                    <div class="select-icon">
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </div>
+                </button>
       
-            <li class="project-item active" data-filter-item data-category="media">
-              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7273756389309661184/" target="_blank">
+                <ul class="select-list">
+                    <li class="select-item">
+                        <button data-select-item>Projects</button>
+                        <button data-select-item>Recommendations</button>
+                    </li>
+                </ul>
+            </div>
+      
+            <ul class="project-list">
+              <li class="project-item active" data-filter-item data-category="projects">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/linkedin-preview.jpg" alt="LinkedIn Post" loading="lazy">
+                  <img src="./assets/images/anubis-icon-1.png" alt="Anubis Project" loading="lazy">
                 </figure>
-                <h3 class="project-title">CS4CS on Forbes</h3>
-              </a>
+                <h3 class="project-title">Anubis</h3>
+                <div class="project-details modern-ui">
+                  <p><strong>Role:</strong> Admin & Developer</p>
+                  <p><strong>Description:</strong> Anubis began as a distributed Learning Management System (LMS) designed to automate computing science courses at NYU, focusing on features like autograding and cloud-based Integrated Development Environments (IDEs).</p>
+                  
+                  <p><strong>Links:</strong> 
+                    <a href="https://github.com/AnubisLMS/Anubis" target="_blank">GitHub</a> | 
+                    <a href="https://about.anubis-lms.io/" target="_blank">Website</a>
+                  </p>
+                  
+                  <div class="expandable-content" style="display: none;">
+                    <ul class="feature-list">
+                      <li><strong>Rootless Docker in IDEs:</strong> Introduced support for rootless Docker within the IDEs, enhancing security and flexibility for user environments.</li>
+                      <li><strong>Anubis Developer Role:</strong> Developed the 'anubis_developer' role to differentiate and manage specific IDE functionalities, catering to diverse development needs.</li>
+                      <li><strong>Debug Mode in Anubis IDE:</strong> Enabled Anubis to operate in debug mode within its own IDE, facilitating more efficient development and troubleshooting processes.</li>
+                      <li><strong>Enhanced CI/CD:</strong> Significantly improved the CI/CD pipelines to streamline development workflows and ensure robust application deployment.</li>
+                      <li><strong>Email Notifications:</strong> Implemented an email notification system to keep users informed about critical events and updates within the platform.</li>
+                      <li><strong>User-Managed PVCs:</strong> Added functionality allowing users to delete their own PVCs, providing greater control over their storage resources.</li>
+                    </ul>
+                  </div>
+                  
+                  <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+                </div>
+              </li>
+              <li class="project-item active" data-filter-item data-category="projects">
+                <figure class="project-img">
+                    <div class="project-item-icon-box">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/images/slt-icon.jpg" alt="Sign Language Translator" loading="lazy">
+                </figure>
+                <h3 class="project-title">CNN-Based Indian Sign Language Translator</h3>
+                <div class="project-details modern-ui">
+                    <p><strong>Role:</strong> Co-Creator & Developer</p>
+                    <p><strong>Description:</strong> Developed from scratch during undergraduate studies, this AI-powered Sign Language Translator bridges communication gaps between the deaf community and non-signers. Utilizing deep learning, computer vision, and edge AI, the system translates hand gestures into text, enabling real-time interpretation.</p>
+                    
+                    <div class="expandable-content" style="display: none;">
+                        <ul class="feature-list">
+                            <li><strong>Deep Learning Model:</strong> Built with TensorFlow, trained on a diverse dataset of hand gestures, ensuring accurate real-time translations.</li>
+                            <li><strong>Computer Vision Integration:</strong> Uses OpenCV for hand tracking and gesture recognition without additional hardware sensors.</li>
+                            <li><strong>Edge AI Capability:</strong> Optimized for mobile and lightweight devices, supporting inference on Raspberry Pi, Android, and web-based platforms.</li>
+                            <li><strong>Multi-Language Support:</strong> Designed for scalability, allowing translation of various sign languages beyond Indian Sign Language (ISL).</li>
+                            <li><strong>Mobile & Web Deployment:</strong> Implemented using Flutter for cross-platform support and TensorFlow.js for web applications.</li>
+                            <li><strong>Efficiency & Accessibility:</strong> Built with real-time inference in mind, ensuring low-latency and high-speed processing without heavy computational resources.</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+                </div>
             </li>
+            </ul>
       
-          </ul>
+            <!-- Recommendations Section -->
+            <ul class="project-list" id="recommendations" data-filter-item data-category="referrals">
+                <li class="project-item">
+                    <a href="https://www.linkedin.com/in/nadesh00" target="_blank" class="project-link">
+                        <figure class="project-img">
+                            <div class="project-item-icon-box">
+                                <ion-icon name="people-outline"></ion-icon>
+                            </div>
+                        </figure>
+                        <h3 class="project-title">Recommendations</h3>
+                        <div class="project-details modern-ui">
+                            <blockquote>
+                                <strong>Abhijit Chitnis</strong><br>
+                                <em>Director, MS Cybersecurity / Cyber Fellows Program & Adjunct at NYU Tandon School of Engineering</em><br>
+                                <span>July 23, 2024, Abhijit managed Nadesh directly</span><br><br>
+      
+                                As the Director of the Graduate Program in Cybersecurity at NYU Tandon School of Engineering, I’ve known 
+                                Nadesh in the capacity of a Graduate Assistant in my team. He was responsible for upgrading the software 
+                                infrastructure for running course assignments for a few different courses as well as fixing issues related 
+                                to running VMs on different client OS versions. Nadesh also helped develop a course to train non-STEM and 
+                                non-CS students to gain hands-on experience with the Linux Command Line Interface for the most common 
+                                commands. This was a definite value-add to incoming students who needed this skill for a host of different 
+                                courses.
+      
+                                Nadesh is knowledgeable in his domain, efficient at researching solutions, and proactively goes the extra 
+                                mile to make sure that every task is completed on time and with top quality. He worked with full-time faculty 
+                                to help create content for a new graduate-level course being introduced in the curriculum. He also trained 
+                                other grad assistants as required. 
+      
+                                I truly appreciated Nadesh’s professionalism, domain knowledge in Cybersecurity / Computer Science, and 
+                                enthusiasm to solve problems by going the extra mile when required. I would hire Nadesh again in a flash 
+                                should the opportunity arise in the future.
+                            </blockquote>
+                        </div>
+                    </a>
+                </li>
+            </ul>
       
         </section>
       
