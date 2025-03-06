@@ -933,6 +933,9 @@
                     <button class="active" data-filter-btn>Projects</button>
                 </li>
                 <li class="filter-item">
+                    <button id="research-btn" data-filter-btn>Research</button>
+                </li>
+                <li class="filter-item">
                     <button id="recommendations-btn" data-filter-btn>Recommendations</button>
                 </li>
             </ul>
@@ -948,11 +951,13 @@
                 <ul class="select-list">
                     <li class="select-item">
                         <button data-select-item>Projects</button>
+                        <button data-select-item>Research</button>
                         <button data-select-item>Recommendations</button>
                     </li>
                 </ul>
             </div>
       
+            <!-- Projects Section -->
             <ul class="project-list">
               <li class="project-item active" data-filter-item data-category="projects">
                 <figure class="project-img">
@@ -965,7 +970,7 @@
                 <div class="project-details modern-ui">
                   <p><strong>Role:</strong> Admin & Developer</p>
                   <p><strong>Description:</strong> Anubis began as a distributed Learning Management System (LMS) designed to automate computing science courses at NYU, focusing on features like autograding and cloud-based Integrated Development Environments (IDEs).</p>
-                  
+                  <p><strong>Contributions:</strong> </p>
                   <p><strong>Links:</strong> 
                     <a href="https://github.com/AnubisLMS/Anubis" target="_blank">GitHub</a> | 
                     <a href="https://about.anubis-lms.io/" target="_blank">Website</a>
@@ -996,7 +1001,7 @@
                 <div class="project-details modern-ui">
                     <p><strong>Role:</strong> Co-Creator & Developer</p>
                     <p><strong>Description:</strong> Developed from scratch during undergraduate studies, this AI-powered Sign Language Translator bridges communication gaps between the deaf community and non-signers. Utilizing deep learning, computer vision, and edge AI, the system translates hand gestures into text, enabling real-time interpretation.</p>
-                    
+                    <p><strong>Contributions:</strong> </p>
                     <div class="expandable-content" style="display: none;">
                         <ul class="feature-list">
                             <li><strong>Deep Learning Model:</strong> Built with TensorFlow, trained on a diverse dataset of hand gestures, ensuring accurate real-time translations.</li>
@@ -1010,7 +1015,49 @@
                     
                     <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
                 </div>
-            </li>
+              </li>
+            </ul>
+      
+            <!-- Research Section -->
+            <ul class="project-list" id="research" data-filter-item data-category="research">
+              <!-- The Update Framework (TUF) Project -->
+              <li class="project-item">
+                  <h3 class="project-title">(TUF)</h3>
+                  <div class="project-details modern-ui">
+                      <p><strong>Role:</strong> PhD Candidate - Research Scholar</p>
+                      <p><strong>Description:</strong> The Update Framework (TUF) is a flexible and secure software update mechanism designed to protect against supply chain attacks. It ensures the authenticity and integrity of software updates, even in the presence of compromised keys or servers. TUF is widely used across industries, including cloud computing, package managers, and container security, to safeguard software distribution.</p>
+                      <p><strong>Contributions:</strong> </p>
+                      <div class="expandable-content" style="display: none;">
+                          <ul class="feature-list">
+                              <li><strong>Secure Software Updates:</strong> Conducted extensive research on The Update Framework (TUF), focusing on its cryptographic mechanisms to safeguard update systems.</li>
+                              <li><strong>Supply Chain Security:</strong> Explored threshold signatures and key revocation strategies to mitigate risks in software supply chains.</li>
+                              <li><strong>Cloud & Edge Resilience:</strong> Designed implementation strategies to enhance the robustness of update infrastructures in cloud and edge computing environments.</li>
+                          </ul>
+                      </div>
+                      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+                  </div>
+              </li>
+          
+              <!-- Uptane Project -->
+              <li class="project-item">
+                  <h3 class="project-title">Uptane</h3>
+                  <div class="project-details modern-ui">
+                      <p><strong>Role:</strong> PhD Candidate - Research Scholar</p>
+                      <p><strong>Description:</strong> Uptane is a secure over-the-air (OTA) update framework designed to protect automotive software updates from cyber threats. It extends The Update Framework (TUF) to address the unique security challenges in connected vehicles, ensuring resilience against attacks even if some update servers are compromised. Uptane is widely adopted in the automotive industry to enhance the integrity and security of vehicle software updates.</p>
+                      <p><strong>Contributions:</strong> </p>
+                      <div class="expandable-content" style="display: none;">
+                          <ul class="feature-list">
+                              <li><strong>Automotive Software Security:</strong> Investigated Uptane, an extension of TUF designed for secure over-the-air (OTA) updates in vehicles.</li>
+                              <li><strong>Threat Analysis & Mitigation:</strong> Analyzed attack vectors such as rollback and freeze attacks, proposing security enhancements.</li>
+                              <li><strong>ECU Integration:</strong> Explored how Uptane integrates with modern automotive ECUs to complement existing vehicle security architectures.</li>
+                              <li><strong>Critical Infrastructure Security:</strong> Examined software update risks in automotive and critical systems, addressing dependency confusion, key compromise, and targeted attacks.</li>
+                              <li><strong>Security Framework Development:</strong> Designed strategies for robust authentication, integrity verification, and resilience against adversarial exploits in update mechanisms.</li>
+                          </ul>
+                      </div>
+                      <button class="read-more-btn" onclick="toggleReadMore(this)">Read More</button>
+                  </div>
+              </li>
+          
             </ul>
       
             <!-- Recommendations Section -->
@@ -1028,31 +1075,20 @@
                                 <strong>Abhijit Chitnis</strong><br>
                                 <em>Director, MS Cybersecurity / Cyber Fellows Program & Adjunct at NYU Tandon School of Engineering</em><br>
                                 <span>July 23, 2024, Abhijit managed Nadesh directly</span><br><br>
-      
                                 As the Director of the Graduate Program in Cybersecurity at NYU Tandon School of Engineering, I’ve known 
                                 Nadesh in the capacity of a Graduate Assistant in my team. He was responsible for upgrading the software 
                                 infrastructure for running course assignments for a few different courses as well as fixing issues related 
-                                to running VMs on different client OS versions. Nadesh also helped develop a course to train non-STEM and 
-                                non-CS students to gain hands-on experience with the Linux Command Line Interface for the most common 
-                                commands. This was a definite value-add to incoming students who needed this skill for a host of different 
-                                courses.
-      
+                                to running VMs on different client OS versions.
                                 Nadesh is knowledgeable in his domain, efficient at researching solutions, and proactively goes the extra 
-                                mile to make sure that every task is completed on time and with top quality. He worked with full-time faculty 
-                                to help create content for a new graduate-level course being introduced in the curriculum. He also trained 
-                                other grad assistants as required. 
-      
-                                I truly appreciated Nadesh’s professionalism, domain knowledge in Cybersecurity / Computer Science, and 
-                                enthusiasm to solve problems by going the extra mile when required. I would hire Nadesh again in a flash 
-                                should the opportunity arise in the future.
+                                mile to make sure that every task is completed on time and with top quality. I truly appreciated Nadesh’s 
+                                professionalism, domain knowledge in Cybersecurity, and enthusiasm to solve problems by going the extra mile 
+                                when required. I would hire Nadesh again in a flash should the opportunity arise in the future.
                             </blockquote>
                         </div>
                     </a>
                 </li>
             </ul>
-      
         </section>
-      
       </article>
       
 

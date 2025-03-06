@@ -209,3 +209,6 @@ document.getElementById("recommendations-btn").addEventListener("click", functio
   document.getElementById("recommendations").scrollIntoView({ behavior: "smooth" });
 });
 
+document.getElementById("research-btn").addEventListener("click", function() {
+  document.getElementById("research").scrollIntoView({ behavior: "smooth" });
+});
