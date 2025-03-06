@@ -495,16 +495,31 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
-.about .article-title { margin-bottom: 15px; }
+.small-note-1 {
+  font-size: 14px;
+  color: var(--light-gray-70);
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+.small-note-2 {
+  font-size: 14px;
+  color: var(--light-gray-70);
+  text-align: center;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.about .article-title { margin-bottom: 10px; }
 
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text p { margin-bottom: 10px; }
 .blinking-cursor {
   display: inline-block;
   font-weight: bold;
@@ -2159,7 +2174,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * ABOUT
    */
-
+  
+   
   /* service */
 
   .service-list {
